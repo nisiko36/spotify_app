@@ -1,0 +1,12 @@
+
+
+Client ID c075fec56bf3410a81739af5c63448aa
+Client Secret d07afb0d788247f192f295dddc9b0389
+
+
+https://accounts.spotify.com/authorize?client_id=${d07afb0d788247f192f295dddc9b0389}&response_type=code&redirect_uri=${d07afb0d788247f192f295dddc9b0389}&scope=${scope}%&state=state
+
+
+test_app
+Client ID 6a5f989f4d2740078305eef6d22d882f
+Client Secret 2b49b4bb7390472ab18710c40c04a307
