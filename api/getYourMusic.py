@@ -2,11 +2,8 @@ import pprint as p
 from tqdm import tqdm
 from get_token import get_token
 
-sp = get_token()
+sp,user = get_token()
 
-# userid
-user=sp.me()["id"]
-print(user)
 
 # お気に入り　全曲　取得
 def getYourMusic():

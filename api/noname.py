@@ -1,31 +1,33 @@
-from get_token import get_token
+from .get_token import get_token
 import pprint as p
 
-sp = get_token()
+sp, user= get_token()
 # ズルい女      3P5xrT2QevrFfjTXTkJOcC
 # Sharam Q     1kK9HRCnY3kiEgiEZIjHVH
-p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['duration_ms'])
-p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['album']['images'])
-# p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC'))
-# p.pprint(sp.artist_albums('1kK9HRCnY3kiEgiEZIjHVH')['items'])
-p.pprint(sp.artist_albums('1kK9HRCnY3kiEgiEZIjHVH',limit=1)['items'])
 
+def test():
+    zuruionna = sp.track('3P5xrT2QevrFfjTXTkJOcC')
+    return zuruionna
+zuruionna=test()
 
+# # 時間
+# p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['duration_ms'])
 
+# # 写真
+# p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['album']['images'])
+
+# # 踊りやすさとか
 # p.pprint(sp.audio_features('3P5xrT2QevrFfjTXTkJOcC'))
 # p.pprint(sp.audio_analysis('3P5xrT2QevrFfjTXTkJOcC'))
 
 
+# playlistshutoku
+# p.pprint(sp.user_playlists(user,10))
 
 
-    # print(len(sp.current_user_saved_tracks(limit=50,offset=1100)['items']))
-
-
-
-
-    # プレイリストを作成,id取得
-    # playlist = sp.user_playlist_create(user, name=create_playlist)
-    # playlist_id = playlist['id']
+# プレイリストを作成,id取得
+# playlist = sp.user_playlist_create(user, name=)
+# playlist_id = playlist['id']
 
 
 

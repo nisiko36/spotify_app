@@ -18,4 +18,5 @@ def get_token():
                                                     client_secret=client_secret,
                                                     redirect_uri=redirect_uri,
                                                     scope=scope))
-    return sp
+    user=sp.me()["id"]
+    return sp, user
