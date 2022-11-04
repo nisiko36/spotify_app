@@ -10,3 +10,7 @@ def homefunc(request):
     context = {'test':zuruionna}
     # create_playlist()
     return render(request, 'home.html',  context)
+
+def listfunc(request):
+    context = {'list1':[1,2,3]}
+    return render(request, 'list.html', context)
