@@ -6,6 +6,7 @@ from api.create_playlist import create_playlist
 
 # Create your views here.
 def homefunc(request):
-    context = {'test':test()}
+    zuruionna = test()
+    context = {'test':zuruionna}
     # create_playlist()
     return render(request, 'home.html',  context)

@@ -6,7 +6,13 @@ sp, user= get_token()
 # Sharam Q     1kK9HRCnY3kiEgiEZIjHVH
 
 def test():
-    zuruionna = sp.track('3P5xrT2QevrFfjTXTkJOcC')
+    zuruionna_id = '3P5xrT2QevrFfjTXTkJOcC'
+    zuruionna = sp.track(zuruionna_id)
+    # zuruionna = sp.track(zuruionna_id)['duration_ms']
+    # images = sp.track(zuruionna_id)['album']['images']
+
+    # p.pprint(zuruionna['name'])
+    # p.pprint(zuruionna['artists'][0]['name'])
     return zuruionna
 zuruionna=test()
 
