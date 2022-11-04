@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid bg-dark">
+
+    <div class="container text-white">
+        <h1 class="display-4">Spotify Alarm</h1>
+        <p class="lead">好きな曲で起きよう！</p>
+    </div>
+</div>
+{% endblock header%}
+
+{% block content %}
+<div>
+    {% for i in list1 %}
+        <div class="alert alert-dark" role="alert">
+            <div>
+                <h2>6:00</h2>
+                <span>Sauch Dog</span>
+                <span>シンデレラボーイ</span>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content%}

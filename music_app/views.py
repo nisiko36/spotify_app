@@ -1,5 +1,16 @@
 from django.shortcuts import render
+# from api.get_token import get_token
+from api.noname import test
+from api.create_playlist import create_playlist
+
 
 # Create your views here.
 def homefunc(request):
-    return render(request, 'home.html')
+    zuruionna = test()
+    context = {'test':zuruionna}
+    # create_playlist()
+    return render(request, 'home.html',  context)
+
+def listfunc(request):
+    context = {'list1':[1,2,3]}
+    return render(request, 'list.html', context)
