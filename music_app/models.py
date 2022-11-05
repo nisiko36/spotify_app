@@ -11,7 +11,3 @@ class SpotifyAlarmModel(models.Model):
 
     def __str__(self):
         return self.track_name
-
-
-
-

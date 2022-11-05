@@ -16,10 +16,23 @@ def test():
     return zuruionna
 zuruionna=test()
 
+
+# どうせ、愛だ feat. クリープハイプ 5CRQuINnKZ5ElgKpgwETCX
+# 空音 3rTxb36W3M1BCxx00iiwMU
+
+#  tracks name and id
+track_name = sp.current_user_saved_tracks()['items'][0]['track']['name']
+track_id = sp.current_user_saved_tracks()['items'][0]['track']['id']
+print(track_name, track_id)
+#  artists name and id
+artist_name = sp.current_user_saved_tracks()['items'][0]['track']['artists'][1]['name']
+artist_id = sp.current_user_saved_tracks()['items'][0]['track']['artists'][1]['id']
+# print(artist_name,artist_id)
+
 # # 時間
 # p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['duration_ms'])
 
-# # 写真
+# # # 写真
 # p.pprint(sp.track('3P5xrT2QevrFfjTXTkJOcC')['album']['images'])
 
 # # 踊りやすさとか
@@ -37,21 +50,12 @@ zuruionna=test()
 
 
 
-    # playlist_id取得
-    # my_playlist=sp.user_playlists(user)
-    # p.pprint(my_playlist)
-    # track = sp.playlist_items(playlist_id="3JKA75EOGdqTZnKpbsEw1Q")
+# playlist_id取得
+# my_playlist=sp.user_playlists(user)
+# p.pprint(my_playlist)
+# track = sp.playlist_items(playlist_id="3JKA75EOGdqTZnKpbsEw1Q")
 
-    # p.pprint(track['items'][0]['track']['artists'][0]['name'])
-    # for playlist in my_playlist['items']:
-    #     p.pprint(playlist['name'])
-    #     p.pprint(playlist['id'])
+p.pprint(sp.track(track_id)['id'])
+p.pprint(sp.track(track_id)['artists'][0]['name'])
+p.pprint(sp.track(track_id)['artists'][0]['id'])
 
-    # saucydog_id = '37i9dQZF1DXcmREjonh06P'
-
-
-    # for songname in sp.playlist(saucydog_id)['tracks']['items']:
-    # p.pprint(sp.playlist(saucydog_id)['tracks']['items'][0]['track']['name'])
-        # p.pprint(songname['track']['id']+songname['track']['name'])
-
-    # p.pprint((sp.track('1Vqs0lXeJafYZz2sxnfB3V')).keys())
