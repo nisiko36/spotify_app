@@ -5,23 +5,28 @@
 
     <div class="container text-white">
         <h1 class="display-4">Spotify Alarm</h1>
-        <p class="lead">好きな曲で起きよう！</p>
+        <p class="lead">  </p>
     </div>
 </div>
 {% endblock header%}
 
 {% block content %}
 <div>
-    {% for i in list1 %}
+    {% for object_dic in object%}
         <div class="alert alert-dark" role="alert">
             <div>
-                <h2>6:00</h2>
-                <span>Sauch Dog</span>
-                <span>シンデレラボーイ</span>
+                <h2>{{object_dic.time}}</h2>
+                <span>{{object_dic.artist_name}}</span>
+                <span>{{object_dic.track_name}}</span>
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                    <label class="custom-control-label" for="customSwitch1"></label>
                 </div>
+                <a href="{% url 'detail' object_dic.pk%}" class="btn btn-secondary" role="button" aria-pressed="true">詳細画面</a>
+                <a href="{% url 'delete' object_dic.pk%}" class="btn btn-secondary" role="button" aria-pressed="true">削除</a>
+                <a href="{% url 'update' object_dic.pk%}" class="btn btn-secondary" role="button" aria-pressed="true">編集画面</a>
+                {% comment %} <a class="btn btn-primary" role="button">Link</a>
+                <a href="{% url 'update' item.pk%}" class="btn btn-info" role="button" aria-pressed="true">編集画面へ</a> {% endcomment %}
             </div>
         </div>
     {% endfor %}
