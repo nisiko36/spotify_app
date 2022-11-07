@@ -1,5 +1,6 @@
 import pprint as p
 from tqdm import tqdm
+import datetime
 from get_token import get_token
 
 sp,user = get_token()
@@ -15,9 +16,25 @@ def getYourMusic():
             track_name = sp.track(track_id)['name']
             artist_name = sp.track(track_id)['artists'][0]['name']
             artist_id = sp.track(track_id)['artists'][0]['id']
-            print(track_name, track_id)
-            print(artist_name, artist_id)
-    return track_name,track_id,artist_name,artist_id
+            image_url = sp.track(track_id)['album']['images'][1]
 
-result = getYourMusic()
-print(result)
+            artist_id
+            track_jouhou = sp.track(track_id)
+            # print(track_name, track_id)
+            # print(artist_name, artist_id)
+            p.pprint(track_jouhou['duration_ms'])
+    return track_name,track_id,artist_name,artist_id,track_jouhou
+
+
+# result = getYourMusic()
+# print(result)
+
+duration_ms = int(238466)
+
+def duration_ms_to_ms(duration_ms):
+    ms = datetime.timedelta(seconds=(duration_ms/1000))
+    # ms = ms.replace(microsecond = 0)
+    ms_str = str(ms)
+    print(ms_str[2:7])
+    return ms
+duration_ms_to_ms(238466)

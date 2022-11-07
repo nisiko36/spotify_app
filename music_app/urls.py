@@ -8,4 +8,6 @@ urlpatterns = [
     path('create/', Create.as_view(), name='create'),
     path('delete/<int:pk>', deletefunc, name='delete'),
     path('update/<int:pk>', Update.as_view(), name='update'),
+    # path('update/<int:pk>', updatefunc, name='update'),
+
 ]

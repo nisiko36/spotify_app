@@ -41,22 +41,23 @@ def deletefunc(request,pk):
     else:
         return render(request, 'delete.html', context)
 
+
 # def updatefunc(request, pk):
 #     object = SpotifyAlarmModel.objects.get(pk=pk)
-#     context = {'object':object}
+#     print(object.artist_name)
+#     context = {'objects':object}
 #     if request.method == 'POST':
 #         object.time = request.POST.get('time')
 #         object.track_name = request.POST.get('track_name')
 #         object.artist_name = request.POST.get('artist_name')
 #         object.switch = request.POST.get('switch')
 #         object.save()
-#     else:
-#         return render(request, 'update.html', context)
+
+#     return render(request, 'update.html', context)
+
 
 class Update(UpdateView):
-    temlate_name = 'update.html'
+    template_name = 'update.html'
     model = SpotifyAlarmModel
-    fields = ['time','track_name','artist_name','switch']
+    fields = ('time','track_name','artist_name','switch')
     success_url = reverse_lazy('list')
-
-
